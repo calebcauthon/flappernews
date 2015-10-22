@@ -44,7 +44,6 @@ app.factory('posts', ['$http', function($http) {
 
   o.get = function(id) {
     return $http.get('/posts/' + id).then(function(res) {
-      console.log('result', res);
       return res.data
     });
   };
