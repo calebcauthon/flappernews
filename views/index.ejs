@@ -13,8 +13,13 @@
     </div>
    
     <script type="text/ng-template" id="/posts.html">
-      {{ post.title }} - {{ post.link }}
-      {{ text }}
+      <h3 class="text-info">{{ post.title }}</h3>
+      <a ng-show="post.link" href="{{ post.link }}">{{ post.link }} </a>
+
+      <form ng-submit="addComment(post, comment)" class="form-group">
+        <textarea ng-model="comment" class="form-control"></textarea>
+        <button>Submit</button>
+      </form>
     </script> 
     <script type="text/ng-template" id="/home.html">
       <div class="page-header">
@@ -31,12 +36,12 @@
             <a href="{{post.link}}">
               {{ post.title }}
             </a>
-            <a href="#/posts/{{ $index }}">Comments</a>
+            <a href="#/posts/{{ post._id }}">Comments</a>
           </span>
 
           <span ng-hide="post.link">
             {{ post.title }}
-            <a href="#/posts/{{ $index }}">Comments</a>
+            <a href="#/posts/{{ post._id }}">Comments</a>
           </span>
         </span>
       </div>

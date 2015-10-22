@@ -53,7 +53,7 @@ app.factory('posts', ['$http', function($http) {
   return o;
 }]);
 app.controller('PostsCtrl', 
-function($scope, $stateParams, posts, post) {
+function($scope, posts, post) {
   $scope.post = post;
 })
 app.controller('MainCtrl', [
