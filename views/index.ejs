@@ -16,8 +16,8 @@
       <h3 class="text-info">{{ post.title }}</h3>
       <a ng-show="post.link" href="{{ post.link }}">{{ post.link }} </a>
 
-      <form ng-submit="addComment(post, comment)" class="form-group">
-        <textarea ng-model="comment" class="form-control"></textarea>
+      <form ng-submit="addComment()" class="form-group">
+        <textarea ng-model="body" class="form-control"></textarea>
         <button>Submit</button>
       </form>
     </script> 
