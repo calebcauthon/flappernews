@@ -21,7 +21,12 @@
         <button>Submit</button>
       </form>
 
-      <p ng-repeat="comment in post.comments">{{ comment.author }}: {{ comment.body }}</p>
+      <p ng-repeat="comment in post.comments">
+        <span ng-click="upvoteComment(comment)" class="glyphicon glyphicon-thumbs-up"></span>
+        [{{ comment.upvotes }}] {{ comment.author }}: {{ comment.body }}
+           
+      </p>
+
     </script> 
     <script type="text/ng-template" id="/home.html">
       <div class="page-header">
