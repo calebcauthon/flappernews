@@ -20,6 +20,8 @@
         <textarea ng-model="body" class="form-control"></textarea>
         <button>Submit</button>
       </form>
+
+      <p ng-repeat="comment in post.comments">{{ comment.author }}: {{ comment.body }}</p>
     </script> 
     <script type="text/ng-template" id="/home.html">
       <div class="page-header">
