@@ -12,7 +12,7 @@ require('./models/Comments');
 require('./models/Users');
 require('./config/passport');
 
-mongoose.connect('mongodb://localhost/news');
+mongoose.connect('mongodb://' + process.env.MONGO_CONNECTION) 
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
